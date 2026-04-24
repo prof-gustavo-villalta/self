@@ -1,0 +1,141 @@
+# Configuração do GitHub Pages para PTIC
+
+title: "Material dos cursos"
+description: "Material dos cursos e suporte para alunos"
+author: "Prof. Gustavo Villalta"
+
+# Tema do GitHub Pages
+theme: jekyll-theme-minimal
+
+# Configurações de build
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Plugins permitidos no GitHub Pages
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Excluir arquivos do build
+exclude:
+  - "*.gem"
+  - "*.gemspec"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "node_modules"
+  - "vendor/bundle/"
+  - "vendor/cache/"
+  - "vendor/gems/"
+  - "vendor/ruby/"
+  - "scripts/"
+  - "organizar/"
+  - "documents/"
+  - "students/"
+  - "research/"
+  - "templates/"
+  - ".github/workflows/README.md"
+
+# Incluir conteúdo dos cursos
+include:
+  - courses
+  - slides
+
+# Configurações de permalink
+permalink: pretty
+
+# Dados dos Cursos
+cursos:
+  ptic:
+    nome: "PTIC - Projetos de TIC"
+    turma: "Técnico em Administração"
+    ano: "2026"
+    semestre: "Anual"
+    url_base: "/courses/2026-PTIC-Projetos-TIC-Tecnico-Administracao"
+    feedback_url: "https://forms.gle/WWqakPdEZ4P97C2h8"
+  mobile2:
+    nome: "Programação de Aplicativos Mobile II"
+    turma: "Desenvolvimento de Sistemas"
+    ano: "2026"
+    semestre: "1º Semestre"
+    url_base: "/courses/2026-1-DS-Prog-Aplicativos-Mobile-II-Novotec-Noturno"
+    feedback_url: "https://forms.gle/125nAuZNNEFNZFog6"
+
+# Valores padrão para layouts
+defaults:
+  # PTIC 2026 - Anual
+  - scope:
+      path: "courses/2026-PTIC-Projetos-TIC-Tecnico-Administracao"
+      type: "pages"
+    values:
+      course_id: "ptic"
+  - scope:
+      path: "courses/2026-PTIC-Projetos-TIC-Tecnico-Administracao/aulas"
+      type: "pages"
+    values:
+      layout: "aula"
+      category: "aulas"
+      course_id: "ptic"
+  - scope:
+      path: "courses/2026-PTIC-Projetos-TIC-Tecnico-Administracao/materiais"
+      type: "pages"
+    values:
+      layout: "material"
+      category: "materiais"
+      course_id: "ptic"
+  - scope:
+      path: "courses/2026-PTIC-Projetos-TIC-Tecnico-Administracao/atividades"
+      type: "pages"
+    values:
+      layout: "atividade"
+      category: "atividades"
+      course_id: "ptic"
+  - scope:
+      path: "courses/2026-PTIC-Projetos-TIC-Tecnico-Administracao/referencias"
+      type: "pages"
+    values:
+      layout: "page"
+      category: "referencias"
+      course_id: "ptic"
+  
+  # Mobile II 2026 - 1º Semestre
+  - scope:
+      path: "courses/2026-1-DS-Prog-Aplicativos-Mobile-II-Novotec-Noturno"
+      type: "pages"
+    values:
+      course_id: "mobile2"
+  - scope:
+      path: "courses/2026-1-DS-Prog-Aplicativos-Mobile-II-Novotec-Noturno/aulas"
+      type: "pages"
+    values:
+      layout: "aula"
+      category: "aulas"
+      course_id: "mobile2"
+  - scope:
+      path: "courses/2026-1-DS-Prog-Aplicativos-Mobile-II-Novotec-Noturno/materiais"
+      type: "pages"
+    values:
+      layout: "material"
+      category: "materiais"
+      course_id: "mobile2"
+  - scope:
+      path: "courses/2026-1-DS-Prog-Aplicativos-Mobile-II-Novotec-Noturno/atividades"
+      type: "pages"
+    values:
+      layout: "atividade"
+      category: "atividades"
+      course_id: "mobile2"
+  - scope:
+      path: "courses/2026-1-DS-Prog-Aplicativos-Mobile-II-Novotec-Noturno/referencias"
+      type: "pages"
+    values:
+      layout: "page"
+      category: "referencias"
+      course_id: "mobile2"
+
+# URL base
+baseurl: ""
+url: ""

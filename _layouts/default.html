@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>{% if page.title %}{{ page.title | escape }} - {% endif %}{{ site.title | escape }}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ '/feed.xml' | relative_url }}">
+  
+  <!-- Font Awesome para ícones -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- JetBrains Mono para código -->
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  {% seo %}
+  
+  <!-- Mermaid para diagramas e fluxogramas -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
+
+  <div class="site-shell">
+    <aside class="site-sidebar">
+      <header class="site-header" role="banner">
+        <div class="wrapper site-header__inner">
+          <div class="site-branding">
+            <a class="site-title" rel="author" href="{{ '/' | relative_url }}">
+              <i class="fas fa-graduation-cap"></i> {{ site.title | escape }}
+            </a>
+            <p class="site-description">{{ site.description | escape }}</p>
+          </div>
+
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Alternar entre tema claro e escuro"
+            aria-pressed="false"
+            data-theme-toggle
+          >
+            <i class="fas fa-moon"></i> <span>Modo escuro</span>
+          </button>
+
+          {% if page.course_id %}
+            {% assign current_course = site.cursos[page.course_id] %}
+            <nav class="course-breadcrumb" aria-label="Trilha de navegação">
+              <a href="{{ '/' | relative_url }}"><i class="fas fa-home"></i> Início</a>
+              <span aria-hidden="true"><i class="fas fa-chevron-right" style="font-size: 0.7em;"></i></span>
+              <a href="{{ current_course.url_base | append: '/' | relative_url }}">{{ current_course.nome }}</a>
+              {% if page.category %}
+                <span aria-hidden="true"><i class="fas fa-chevron-right" style="font-size: 0.7em;"></i></span>
+                <span class="current-category">{{ page.category | capitalize }}</span>
+              {% endif %}
+            </nav>
+          {% endif %}
+        </div>
+      </header>
+
+      <footer class="site-footer h-card">
+        <data class="u-url" href="{{ '/' | relative_url }}"></data>
+        <div class="wrapper">
+          <h2 class="footer-heading"><i class="fas fa-book-open"></i> {{ site.title | escape }}</h2>
+          <div class="footer-col-wrapper">
+            <div class="footer-col footer-col-1">
+              <ul class="contact-list">
+                <li class="p-name"><i class="fas fa-chalkboard-teacher"></i> {{ site.author | escape }}</li>
+                {% if page.course_id %}
+                  {% assign current_course = site.cursos[page.course_id] %}
+                  <li><i class="fas fa-laptop-code"></i> {{ current_course.nome }}</li>
+                  <li><i class="fas fa-users"></i> {{ current_course.turma }}</li>
+                  <li><i class="fas fa-calendar-alt"></i> {{ current_course.ano }} - {{ current_course.semestre }}</li>
+                  {% if current_course.feedback_url %}
+                    <li>
+                      <a class="feedback-link" href="{{ current_course.feedback_url }}" target="_blank" rel="noreferrer">
+                        <i class="fas fa-comment-dots"></i> Enviar feedback
+                      </a>
+                    </li>
+                  {% endif %}
+                {% endif %}
+              </ul>
+            </div>
+            <div class="footer-col footer-col-2">
+              <p><i class="fas fa-info-circle"></i> {{ site.description | escape }}</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </aside>
+
+    <main id="main-content" class="page-content" aria-label="Conteúdo principal">
+      <div class="wrapper">
+        {% if page.course_id %}
+          {% assign current_course = site.cursos[page.course_id] %}
+          <nav class="course-nav" aria-label="Navegação do curso">
+            <a href="{{ current_course.url_base | append: '/aulas/' | relative_url }}"{% if page.category == 'aulas' %} aria-current="page"{% endif %}>
+              <i class="fas fa-chalkboard"></i> Aulas
+            </a>
+            <a href="{{ current_course.url_base | append: '/materiais/' | relative_url }}"{% if page.category == 'materiais' %} aria-current="page"{% endif %}>
+              <i class="fas fa-book"></i> Materiais
+            </a>
+            <a href="{{ current_course.url_base | append: '/referencias/' | relative_url }}"{% if page.category == 'referencias' %} aria-current="page"{% endif %}>
+              <i class="fas fa-bookmark"></i> Referências
+            </a>
+          </nav>
+        {% endif %}
+
+        <div class="content-card">
+          {{ content }}
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      var storageKey = "preferred-theme";
+      var root = document.documentElement;
+      var toggle = document.querySelector("[data-theme-toggle]");
+      var mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+      function readStoredTheme() {
+        try {
+          var storedTheme = window.localStorage.getItem(storageKey);
+          if (storedTheme === "light" || storedTheme === "dark") {
+            return storedTheme;
+          }
+        } catch (error) {
+          return null;
+        }
+
+        return null;
+      }
+
+      function resolveTheme() {
+        return readStoredTheme() || (mediaQuery.matches ? "dark" : "light");
+      }
+
+      function applyTheme(theme) {
+        var isDark = theme === "dark";
+        root.setAttribute("data-theme", theme);
+
+        if (toggle) {
+          var icon = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+          var text = isDark ? "Modo claro" : "Modo escuro";
+          toggle.innerHTML = icon + ' <span>' + text + '</span>';
+          toggle.setAttribute("aria-pressed", String(isDark));
+        }
+      }
+
+      applyTheme(resolveTheme());
+
+      if (toggle) {
+        toggle.addEventListener("click", function () {
+          var nextTheme = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+
+          try {
+            window.localStorage.setItem(storageKey, nextTheme);
+          } catch (error) {
+            // Ignore storage failures and still apply the chosen theme.
+          }
+
+          applyTheme(nextTheme);
+        });
+      }
+
+      function handlePreferenceChange(event) {
+        if (!readStoredTheme()) {
+          applyTheme(event.matches ? "dark" : "light");
+        }
+      }
+
+      if (typeof mediaQuery.addEventListener === "function") {
+        mediaQuery.addEventListener("change", handlePreferenceChange);
+      } else if (typeof mediaQuery.addListener === "function") {
+        mediaQuery.addListener(handlePreferenceChange);
+      }
+    }());
+  </script>
+  
+  <!-- Inicialização do Mermaid -->
+  <script>
+    (function() {
+      // Converter blocos de código mermaid em divs mermaid
+      document.querySelectorAll('pre code.language-mermaid').forEach(function(codeBlock) {
+        var pre = codeBlock.parentElement;
+        var mermaidDiv = document.createElement('div');
+        mermaidDiv.className = 'mermaid';
+        // textContent já retorna o texto decodificado (&gt; vira >)
+        mermaidDiv.textContent = codeBlock.textContent;
+        pre.parentElement.replaceChild(mermaidDiv, pre);
+      });
+      
+      // Detectar tema atual
+      var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      
+      mermaid.initialize({
+        startOnLoad: true,
+        theme: isDark ? 'dark' : 'default',
+        flowchart: {
+          useMaxWidth: true,
+          htmlLabels: true,
+          curve: 'basis'
+        }
+      });
+      
+      // Atualizar tema do Mermaid quando o tema da página mudar
+      var toggle = document.querySelector("[data-theme-toggle]");
+      if (toggle) {
+        toggle.addEventListener("click", function() {
+          setTimeout(function() {
+            location.reload(); // Recarrega para aplicar o novo tema do Mermaid
+          }, 100);
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

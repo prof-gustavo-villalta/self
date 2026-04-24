@@ -1,0 +1,27 @@
+---
+layout: default
+---
+
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">{{ page.title | escape }}</h1>
+    <span class="material-badge"><i class="fas fa-book"></i> Material de Apoio</span>
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  {% if page.course_id %}
+    {% assign current_course = site.cursos[page.course_id] %}
+    <div class="material-footer">
+      <hr>
+      <p><strong><i class="fas fa-book-reader"></i> Material de Apoio</strong></p>
+      <p>Este material complementa as aulas do curso <strong>{{ current_course.nome }}</strong></p>
+      <p><i class="fas fa-users"></i> {{ current_course.turma }} | <i class="fas fa-calendar-alt"></i> {{ current_course.ano }} - {{ current_course.semestre }}</p>
+      {% if current_course.feedback_url %}
+        <p><a href="{{ current_course.feedback_url }}" target="_blank"><i class="fas fa-comment-dots"></i> Dar feedback sobre este material</a></p>
+      {% endif %}
+    </div>
+  {% endif %}
+</article>

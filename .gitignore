@@ -1,0 +1,36 @@
+# Artefatos locais e temporários
+.cachebro/
+.jekyll-cache/
+_site/
+__pycache__/
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
+
+# Configurações locais e credenciais
+.env
+.env.*
+.obsidian/
+.codex
+.agents/
+prof-gustavo-villalta-key.json
+prof-gustavo-villalta-oauth.json
+skills-lock.json
+
+# Conteúdo interno não público
+docs/
+documents/
+forms/
+materials/
+organizar/
+research/
+scripts/
+students/
+templates/
+tests/
+courses/**/dados/
+courses/**/logs/
+courses/**/documentos/*rascunho*
+courses/**/documentos/notas-finais*
+courses/**/documentos/CONVOCACAO-*
