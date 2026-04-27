@@ -25,8 +25,8 @@ category: aulas
 |  04  | 31/03 | [Colaboração e Compartilhamento na Nuvem](aula-04)           | [Formulario Aula 04](https://docs.google.com/forms/d/e/1FAIpQLScOyTagFVu7r52g7ePbCRKtcBPvt0JGv9v4dsBbG_qo1UYzPQ/viewform)            |
 |  10  | 13/04 | [Edição de Textos: Formatação](aula-10)                      | [Formulario Aula 10](https://docs.google.com/forms/d/e/1FAIpQLScmCz1KAz3g9Fpqx1mGj4MECeHIeg8-JepIBFQVcFOZlkETFg/viewform?usp=dialog) |
 |  11  | 14/04 | [Edição de Textos e Briefing do Projeto](aula-11)            | [Formulario Aula 11](https://docs.google.com/forms/d/e/1FAIpQLScQrpYhcbkf6C6NHlo6scku2-GmfrEVEWC9hrP3pPpesfLBmA/viewform?usp=dialog) |
-|  12  | 04/05 | [Apresentações: Design Visual e Produção I](aula-12)         | [Formulário Projeto (12 e 13)](https://docs.google.com/forms/d/e/1FAIpQLScPjjc1BiqbJqgwzwsJMpZt3ctGU2cwWpXrVa3YKBdA84vabA/viewform)  |
-|  13  | 05/05 | [Apresentações: Produção II e Oratória](aula-13)             | [Formulário Projeto (12 e 13)](https://docs.google.com/forms/d/e/1FAIpQLScPjjc1BiqbJqgwzwsJMpZt3ctGU2cwWpXrVa3YKBdA84vabA/viewform)  |
+|  12  | 27/04 | [Apresentações: Design Visual e Produção I](aula-12)         | [Formulário Projeto (12 e 13)](https://docs.google.com/forms/d/e/1FAIpQLScPjjc1BiqbJqgwzwsJMpZt3ctGU2cwWpXrVa3YKBdA84vabA/viewform)  |
+|  13  | 28/04 | [Apresentações: Produção II e Oratória](aula-13)             | [Formulário Projeto (12 e 13)](https://docs.google.com/forms/d/e/1FAIpQLScPjjc1BiqbJqgwzwsJMpZt3ctGU2cwWpXrVa3YKBdA84vabA/viewform)  |
 |  14  | 11/05 | [Seminários: Inovação na Administração (Parte I)](aula-14)   |                                                                                                                                      |
 |  15  | 12/05 | [Seminários: Inovação na Administração (Parte II)](aula-15)  |                                                                                                                                      |
 |  16  | 18/05 | [Planilhas: Interface e Dados](aula-16)                      |                                                                                                                                      |

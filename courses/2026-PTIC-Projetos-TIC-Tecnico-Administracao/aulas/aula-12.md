@@ -1,14 +1,14 @@
 ---
 layout: aula
 title: "Aula 12 - Apresentações: Design Visual e Produção I"
-date: 2026-05-04
+date: 2026-04-27
 category: aulas
 course_id: ptic
 ---
 
 # Aula 12 - Apresentações: Design Visual e Produção I
 
-**Data:** 04/05/2026  
+**Data:** 27/04/2026  
 **Duração:** 1 hora-aula (50 min)  
 **Local:** Laboratório de Informática  
 **Objetivo:** Planejar e iniciar a apresentação do Seminário de Inovação com
