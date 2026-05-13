@@ -65,6 +65,22 @@ Envie no formulario:
 - trecho do `ApiService` com `POST` e `DELETE`;
 - resposta curta explicando por que o JSONPlaceholder retorna sucesso mas nao
   persiste o registro.
+- resposta curta explicando a diferenca entre `fromJson` e `toJson`;
+- resposta curta explicando por que a exclusao deve esperar a resposta da API
+  antes de remover o item da tela.
+
+---
+
+## Parte conceitual obrigatoria
+
+Além do app funcionando, responda no formulario:
+
+1. Qual e a diferenca entre `POST /users` e `DELETE /users/1`?
+2. Por que o `POST` precisa enviar `Content-Type: application/json`?
+3. O que significa receber status `201`?
+4. Por que a tela nao deveria montar URL e JSON diretamente?
+5. O que muda entre uma API de testes como JSONPlaceholder e uma API real com
+   banco de dados?
 
 ---
 
@@ -77,6 +93,8 @@ Envie no formulario:
 - [ ] Existe `SnackBar` para sucesso e erro.
 - [ ] O app nao trava se a internet falhar.
 - [ ] O repositorio esta atualizado.
+- [ ] Voce consegue explicar o fluxo completo de cadastro.
+- [ ] Voce consegue explicar o fluxo completo de exclusao.
 
 ---
 

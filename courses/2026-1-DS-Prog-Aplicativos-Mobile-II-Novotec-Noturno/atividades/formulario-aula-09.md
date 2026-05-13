@@ -27,7 +27,9 @@ seu repositorio ou em uma pasta compartilhavel.
 | 5     | Qual metodo HTTP remove um registro usando o ID na URL?                  | Multipla escolha |
 | 6     | Por que o JSONPlaceholder retorna sucesso mas nao salva de verdade?      | Paragrafo        |
 | 7     | Link para evidencias do POST, DELETE, SnackBar e confirmacao de exclusao | Resposta curta   |
-| 8     | Qual foi sua maior dificuldade na aula?                                  | Paragrafo        |
+| 8     | Explique a diferenca entre `fromJson` e `toJson`                         | Paragrafo        |
+| 9     | Por que o app deve esperar a API responder antes de remover da lista?    | Paragrafo        |
+| 10    | Qual foi sua maior dificuldade na aula?                                  | Paragrafo        |
 
 ---
 
@@ -38,6 +40,8 @@ seu repositorio ou em uma pasta compartilhavel.
 - confirme se a exclusao envia uma requisicao `DELETE`;
 - registre pelo menos uma evidencia visual do `SnackBar`;
 - registre o dialogo de confirmacao antes da exclusao;
+- revise a diferenca entre `POST`, `PUT` e `DELETE`;
+- revise o motivo de usar `ApiService` separado da tela;
 - verifique se o repositorio esta atualizado.
 
 ---
