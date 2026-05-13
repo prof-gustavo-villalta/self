@@ -69,8 +69,6 @@ Antes de começar, deixe estes materiais abertos:
 
 - [Aula 08 - API REST Parte 1](/self/courses/2026-1-DS-Prog-Aplicativos-Mobile-II-Novotec-Noturno/aulas/aula-08)
 - [Material 04 - Consumo de APIs REST](/self/courses/2026-1-DS-Prog-Aplicativos-Mobile-II-Novotec-Noturno/materiais/material-04)
-- [Atividade 09 - REST Parte 2 (Mini CRUD)](/self/courses/2026-1-DS-Prog-Aplicativos-Mobile-II-Novotec-Noturno/atividades/atividade-09)
-- [Formulário Aula 09](/self/courses/2026-1-DS-Prog-Aplicativos-Mobile-II-Novotec-Noturno/atividades/formulario-aula-09)
 
 Você também precisa de:
 
@@ -281,7 +279,7 @@ Siga nesta ordem:
 7. Adicionar `DELETE` no `ApiService`.
 8. Criar confirmação antes da exclusão.
 9. Remover o item da lista local depois do sucesso.
-10. Registrar evidências e preencher a Atividade 09.
+10. Registrar as evidências da entrega no próprio repositório.
 
 Não pule checkpoints. Se algo quebrar, volte para o último checkpoint que
 funcionava.
@@ -846,7 +844,22 @@ conteúdo central da aula.
 
 ## Entrega da aula
 
-Para considerar a atividade pronta, você deve ter:
+Esta entrega está embutida neste roteiro. Não existe arquivo separado de
+atividade nem formulário separado para a Aula 09.
+
+### Objetivo da entrega
+
+Evoluir o app da Aula 08 para executar pelo menos duas ações de escrita em uma
+API REST:
+
+- criar um registro com `POST`;
+- remover um registro com `DELETE`.
+
+O `PUT` é desafio extra, não requisito mínimo.
+
+### Entrega mínima
+
+Seu app deve demonstrar:
 
 - [ ] lista da Aula 08 ainda funcionando com `GET`;
 - [ ] `toJson` no modelo;
@@ -856,18 +869,57 @@ Para considerar a atividade pronta, você deve ter:
 - [ ] confirmação antes de excluir;
 - [ ] `SnackBar` em sucesso e erro;
 - [ ] link do repositório atualizado;
-- [ ] evidências registradas para o formulário.
+- [ ] evidências registradas no README, em uma pasta `evidencias/` ou em uma
+      issue/descrição da entrega.
 
-As evidências e perguntas estão em:
+### Critérios de avaliação
 
-- [Atividade 09 - REST Parte 2 (Mini CRUD)](/self/courses/2026-1-DS-Prog-Aplicativos-Mobile-II-Novotec-Noturno/atividades/atividade-09)
-- [Formulário Aula 09](/self/courses/2026-1-DS-Prog-Aplicativos-Mobile-II-Novotec-Noturno/atividades/formulario-aula-09)
+- **3 pts**: `POST` implementado corretamente com JSON e status `201`;
+- **2 pts**: `DELETE` implementado corretamente com `id` na URL;
+- **2 pts**: UI com cadastro, confirmação de exclusão e feedback por `SnackBar`;
+- **2 pts**: tratamento de carregamento/erro durante as ações;
+- **1 pt**: organização do código em model, service e telas.
+
+### Evidências esperadas
+
+Registre no repositório:
+
+- link ou print do cadastro funcionando;
+- print do `SnackBar` após criar ou excluir;
+- print do diálogo de confirmação antes de excluir;
+- trecho ou arquivo do `ApiService` com `POST` e `DELETE`;
+- explicação curta sobre por que o JSONPlaceholder retorna sucesso mas não
+  persiste o registro;
+- explicação curta da diferença entre `fromJson` e `toJson`;
+- explicação curta sobre por que a exclusão deve esperar a resposta da API antes
+  de remover o item da tela.
+
+### Parte conceitual obrigatória
+
+Além do app funcionando, responda no próprio repositório:
+
+1. Qual é a diferença entre `POST /users` e `DELETE /users/1`?
+2. Por que o `POST` precisa enviar `Content-Type: application/json`?
+3. O que significa receber status `201`?
+4. Por que a tela não deveria montar URL e JSON diretamente?
+5. O que muda entre uma API de testes como JSONPlaceholder e uma API real com
+   banco de dados?
+
+### Checklist final
+
+- [ ] O app ainda lista usuários com `GET`.
+- [ ] O cadastro chama `POST` e recebe status `201`.
+- [ ] O `DELETE` usa o `id` correto.
+- [ ] Existe confirmação antes da exclusão.
+- [ ] Existe `SnackBar` para sucesso e erro.
+- [ ] O app não trava se a internet falhar.
+- [ ] O repositório está atualizado.
+- [ ] Você consegue explicar o fluxo completo de cadastro.
+- [ ] Você consegue explicar o fluxo completo de exclusão.
 
 ## Materiais Relacionados
 
 - [Material 04 - Consumo de APIs REST](/self/courses/2026-1-DS-Prog-Aplicativos-Mobile-II-Novotec-Noturno/materiais/material-04)
-- [Atividade 09 - REST Parte 2 (Mini CRUD)](/self/courses/2026-1-DS-Prog-Aplicativos-Mobile-II-Novotec-Noturno/atividades/atividade-09)
-- [Formulário Aula 09](/self/courses/2026-1-DS-Prog-Aplicativos-Mobile-II-Novotec-Noturno/atividades/formulario-aula-09)
 
 ---
 
