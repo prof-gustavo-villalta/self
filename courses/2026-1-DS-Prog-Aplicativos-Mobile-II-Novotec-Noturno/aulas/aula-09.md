@@ -847,6 +847,10 @@ conteúdo central da aula.
 Esta entrega está embutida neste roteiro. Não existe arquivo separado de
 atividade nem formulário separado para a Aula 09.
 
+O envio oficial deve ser feito pelo Google Forms:
+
+- [Formulário de entrega da Aula 09](https://docs.google.com/forms/d/e/1FAIpQLSc5naYv_iX07p-Z_Siz1FfU3Voh-BbpPH5AcKCETqSNh7PF6g/viewform?usp=dialog)
+
 ### Objetivo da entrega
 
 Evoluir o app da Aula 08 para executar pelo menos duas ações de escrita em uma
