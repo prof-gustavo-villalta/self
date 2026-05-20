@@ -63,22 +63,22 @@ Resultado esperado:
 
 ```mermaid
 flowchart TD
-    A[Usuario abre o app] --> B[App mostra tela inicial]
-    B --> C{Usuario pede localizacao}
-    C --> D[Verificar se o servico de localizacao esta ligado]
-    D -->|Desligado| E[Mostrar orientacao para ligar o GPS]
-    D -->|Ligado| F[Verificar permissao]
-    F -->|Negada| G[Solicitar permissao ao usuario]
-    F -->|Permitida| H[Obter posicao atual]
+    A[Usuário abre o app] --> B[App mostra tela inicial]
+    B --> C{Usuário pede localização}
+    C --> D[Verificar se o serviço de localização está ligado]
+    D -->|Desligado| E[Mostrar orientação para ligar o GPS]
+    D -->|Ligado| F[Verificar permissão]
+    F -->|Negada| G[Solicitar permissão ao usuário]
+    F -->|Permitida| H[Obter posição atual]
     G -->|Permitida| H
     G -->|Negada| I[Mostrar aviso sem quebrar o app]
-    H --> J[Atualizar latitude, longitude e precisao]
-    J --> K{Usuario inicia tracking?}
-    K -->|Sim| L[Assinar stream de posicoes]
-    L --> M[Receber novas posicoes]
-    M --> N[Somar distancia aproximada]
+    H --> J[Atualizar latitude, longitude e precisão]
+    J --> K{Usuário inicia tracking?}
+    K -->|Sim| L[Assinar stream de posições]
+    L --> M[Receber novas posições]
+    M --> N[Somar distância aproximada]
     N --> M
-    K -->|Nao| J
+    K -->|Não| J
 ```
 
 Observe a continuidade:
@@ -186,15 +186,15 @@ recebe novas posições ao longo do tempo.
 
 ```mermaid
 sequenceDiagram
-    participant U as Usuario
+    participant U as Usuário
     participant A as App Flutter
     participant G as geolocator
     participant S as Sistema
 
-    U->>A: toca em Obter posicao
+    U->>A: toca em Obter posição
     A->>G: getCurrentPosition()
-    G->>S: pede localizacao atual
-    S-->>G: latitude, longitude e precisao
+    G->>S: pede localização atual
+    S-->>G: latitude, longitude e precisão
     G-->>A: Position
     A-->>U: mostra coordenadas
 ```
@@ -207,9 +207,9 @@ sequenceDiagram
 
     A->>G: getPositionStream().listen(...)
     loop enquanto tracking estiver ativo
-        S-->>G: nova posicao
+        S-->>G: nova posição
         G-->>A: Position
-        A-->>A: atualiza tela e soma distancia
+        A-->>A: atualiza tela e soma distância
     end
     A->>G: cancel()
 ```
@@ -222,12 +222,12 @@ o app quer esse dado. Além disso, permissão não é apenas "sim" ou "não".
 ```mermaid
 stateDiagram-v2
     [*] --> Desconhecida
-    Desconhecida --> Negada: usuario ainda nao permitiu
-    Negada --> DuranteUso: usuario permite durante o uso
-    Negada --> NegadaParaSempre: usuario bloqueia nas configuracoes
-    DuranteUso --> Negada: usuario remove permissao
+    Desconhecida --> Negada: usuário ainda não permitiu
+    Negada --> DuranteUso: usuário permite durante o uso
+    Negada --> NegadaParaSempre: usuário bloqueia nas configurações
+    DuranteUso --> Negada: usuário remove permissão
     DuranteUso --> [*]
-    NegadaParaSempre --> DuranteUso: usuario muda nas configuracoes
+    NegadaParaSempre --> DuranteUso: usuário muda nas configurações
 ```
 
 Para a aula, a regra prática será:
@@ -245,10 +245,10 @@ explica o motivo e para a leitura quando ela não é mais útil.
 
 ```mermaid
 flowchart TD
-    A[Preciso da localizacao?] -->|Nao| B[Nao pedir permissao]
+    A[Preciso da localização?] -->|Não| B[Não pedir permissão]
     A -->|Sim| C[Explicar no contexto da tela]
-    C --> D[Pedir permissao durante o uso]
-    D --> E[Usar a localizacao somente para a funcao atual]
+    C --> D[Pedir permissão durante o uso]
+    D --> E[Usar a localização somente para a função atual]
     E --> F[Parar tracking ao sair da tela ou do app]
 ```
 
@@ -344,10 +344,10 @@ flowchart TD
     B --> C[MaterialApp]
     C --> D[LocationHomePage]
     D --> E[_LocationHomePageState]
-    E --> F[verificar servico e permissao]
-    E --> G[obter posicao atual]
+    E --> F[verificar serviço e permissão]
+    E --> G[obter posição atual]
     E --> H[iniciar tracking]
-    E --> I[somar distancia]
+    E --> I[somar distância]
     E --> J[parar tracking no ciclo de vida]
 ```
 
@@ -396,7 +396,7 @@ class _LocationHomePageState extends State<LocationHomePage>
   double _distanceMeters = 0;
   bool _isLoading = false;
   bool _isTracking = false;
-  String _status = 'Toque no botao para obter sua localizacao.';
+  String _status = 'Toque no botão para obter sua localização.';
 
   @override
   void initState() {
@@ -409,7 +409,7 @@ class _LocationHomePageState extends State<LocationHomePage>
 
     if (!serviceEnabled) {
       throw Exception(
-        'O servico de localizacao esta desligado. Ligue o GPS nas configuracoes do aparelho.',
+        'O serviço de localização está desligado. Ligue o GPS nas configurações do aparelho.',
       );
     }
 
@@ -420,12 +420,12 @@ class _LocationHomePageState extends State<LocationHomePage>
     }
 
     if (permission == LocationPermission.denied) {
-      throw Exception('Permissao de localizacao negada.');
+      throw Exception('Permissão de localização negada.');
     }
 
     if (permission == LocationPermission.deniedForever) {
       throw Exception(
-        'Permissao negada para sempre. Altere a permissao nas configuracoes do sistema.',
+        'Permissão negada para sempre. Altere a permissão nas configurações do sistema.',
       );
     }
 
@@ -441,7 +441,7 @@ class _LocationHomePageState extends State<LocationHomePage>
   Future<void> _getCurrentLocation() async {
     setState(() {
       _isLoading = true;
-      _status = 'Buscando localizacao atual...';
+      _status = 'Buscando localização atual...';
     });
 
     try {
@@ -454,7 +454,7 @@ class _LocationHomePageState extends State<LocationHomePage>
       setState(() {
         _currentPosition = position;
         _lastTrackedPosition = position;
-        _status = 'Localizacao atual obtida com sucesso.';
+        _status = 'Localização atual obtida com sucesso.';
       });
     } catch (error) {
       if (!mounted) {
@@ -515,7 +515,7 @@ class _LocationHomePageState extends State<LocationHomePage>
         _lastTrackedPosition = firstPosition;
         _distanceMeters = 0;
         _isTracking = true;
-        _status = 'Tracking ativo. Desloque-se para acumular distancia.';
+        _status = 'Tracking ativo. Desloque-se para acumular distância.';
       });
     } catch (error) {
       if (!mounted) {
@@ -551,7 +551,7 @@ class _LocationHomePageState extends State<LocationHomePage>
       _currentPosition = position;
       _lastTrackedPosition = position;
       _distanceMeters += addedDistance;
-      _status = 'Tracking ativo. Ultima atualizacao recebida.';
+      _status = 'Tracking ativo. Última atualização recebida.';
     });
   }
 
@@ -608,7 +608,7 @@ class _LocationHomePageState extends State<LocationHomePage>
             FilledButton.icon(
               onPressed: _isLoading ? null : _getCurrentLocation,
               icon: const Icon(Icons.my_location),
-              label: const Text('Obter posicao atual'),
+              label: const Text('Obter posição atual'),
             ),
             const SizedBox(height: 12),
             FilledButton.tonalIcon(
@@ -690,7 +690,7 @@ class _PositionCard extends StatelessWidget {
       return const Card(
         child: Padding(
           padding: EdgeInsets.all(16),
-          child: Text('Nenhuma posicao lida ainda.'),
+          child: Text('Nenhuma posição lida ainda.'),
         ),
       );
     }
@@ -705,7 +705,7 @@ class _PositionCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Posicao atual',
+              'Posição atual',
               style: Theme.of(context).textTheme.titleLarge,
             ),
             const SizedBox(height: 12),
@@ -718,7 +718,7 @@ class _PositionCard extends StatelessWidget {
               value: position.longitude.toStringAsFixed(6),
             ),
             _PositionLine(
-              label: 'Precisao',
+              label: 'Precisão',
               value: '${position.accuracy.toStringAsFixed(1)} m',
             ),
             _PositionLine(
@@ -778,7 +778,7 @@ class _DistanceCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Distancia aproximada',
+              'Distância aproximada',
               style: Theme.of(context).textTheme.titleLarge,
             ),
             const SizedBox(height: 8),
@@ -788,7 +788,7 @@ class _DistanceCard extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             const Text(
-              'Este valor e uma estimativa calculada entre as posicoes recebidas durante o tracking.',
+              'Este valor é uma estimativa calculada entre as posições recebidas durante o tracking.',
             ),
           ],
         ),
@@ -810,18 +810,18 @@ que a leitura seja possível.
 
 ```mermaid
 flowchart TD
-    A[_determinePosition] --> B{Servico de localizacao ligado?}
-    B -->|Nao| C[Interromper com mensagem clara]
-    B -->|Sim| D[Verificar permissao atual]
-    D --> E{Permissao negada?}
-    E -->|Sim| F[Solicitar permissao]
-    E -->|Nao| G[Continuar]
-    F --> H{Usuario permitiu?}
-    H -->|Nao| I[Interromper com mensagem clara]
+    A[_determinePosition] --> B{Serviço de localização ligado?}
+    B -->|Não| C[Interromper com mensagem clara]
+    B -->|Sim| D[Verificar permissão atual]
+    D --> E{Permissão negada?}
+    E -->|Sim| F[Solicitar permissão]
+    E -->|Não| G[Continuar]
+    F --> H{Usuário permitiu?}
+    H -->|Não| I[Interromper com mensagem clara]
     H -->|Sim| G
     G --> J{Negada para sempre?}
-    J -->|Sim| K[Orientar configuracoes do sistema]
-    J -->|Nao| L[getCurrentPosition]
+    J -->|Sim| K[Orientar configurações do sistema]
+    J -->|Não| L[getCurrentPosition]
 ```
 
 Esse fluxo evita um erro comum: chamar `getCurrentPosition()` sem saber se o
@@ -858,11 +858,11 @@ const locationSettings = LocationSettings(
 
 ```mermaid
 flowchart LR
-    A[Posicao 1] --> B{Moveu pelo menos 5 m?}
-    B -->|Nao| C[Evitar atualizacao desnecessaria]
+    A[Posição 1] --> B{Moveu pelo menos 5 m?}
+    B -->|Não| C[Evitar atualização desnecessária]
     B -->|Sim| D[Emitir nova Position]
     D --> E[Atualizar UI]
-    D --> F[Somar distancia]
+    D --> F[Somar distância]
 ```
 
 Quanto menor o `distanceFilter`, mais atualizações o app pode receber. Isso pode
@@ -875,9 +875,9 @@ duas coordenadas.
 
 ```mermaid
 flowchart TD
-    A[Posicao anterior] --> C[distanceBetween]
-    B[Nova posicao] --> C
-    C --> D[Distancia em metros]
+    A[Posição anterior] --> C[distanceBetween]
+    B[Nova posição] --> C
+    C --> D[Distância em metros]
     D --> E[Somar ao total do tracking]
 ```
 
@@ -917,11 +917,11 @@ Por isso o resultado deve ser tratado como estimativa.
 
 ```mermaid
 flowchart TD
-    A[Teste] --> B[Posicao atual funciona]
-    A --> C[Permissao negada nao quebra]
+    A[Teste] --> B[Posição atual funciona]
+    A --> C[Permissão negada não quebra]
     A --> D[Tracking inicia e para]
     A --> E[App em background para tracking]
-    A --> F[Distancia aparece como estimativa]
+    A --> F[Distância aparece como estimativa]
 ```
 
 ---
@@ -948,10 +948,10 @@ precisão ruim antes de calcular trajeto.
 
 ```mermaid
 flowchart TD
-    A[Nova leitura] --> B{Precisao e aceitavel?}
-    B -->|Nao| C[Ignorar leitura]
+    A[Nova leitura] --> B{Precisão é aceitável?}
+    B -->|Não| C[Ignorar leitura]
     B -->|Sim| D{Deslocamento faz sentido?}
-    D -->|Nao| C
+    D -->|Não| C
     D -->|Sim| E[Atualizar trajeto]
 ```
 
@@ -978,7 +978,7 @@ Exemplo de filtro simples:
 ```dart
 if (position.accuracy > 100) {
   setState(() {
-    _status = 'Leitura ignorada: precisao muito baixa.';
+    _status = 'Leitura ignorada: precisão muito baixa.';
   });
   return;
 }

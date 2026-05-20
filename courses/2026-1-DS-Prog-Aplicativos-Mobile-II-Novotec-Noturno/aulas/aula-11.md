@@ -60,16 +60,16 @@ Resultado esperado:
 
 ```mermaid
 flowchart TD
-    A[Usuario abre o app] --> B[Flutter monta a tela]
-    B --> C[App assina o stream do acelerometro]
-    C --> D[Sensor envia eventos varias vezes por segundo]
+    A[Usuário abre o app] --> B[Flutter monta a tela]
+    B --> C[App assina o stream do acelerômetro]
+    C --> D[Sensor envia eventos várias vezes por segundo]
     D --> E[App guarda x, y e z no estado]
-    E --> F[Interface recalcula posicao da bolha]
-    F --> G[Usuario inclina o celular]
+    E --> F[Interface recalcula posição da bolha]
+    F --> G[Usuário inclina o celular]
     G --> D
     F --> H{App foi para segundo plano?}
     H -->|Sim| I[Cancelar assinatura do sensor]
-    H -->|Nao| D
+    H -->|Não| D
     I --> J{App voltou?}
     J -->|Sim| C
 ```
@@ -141,12 +141,12 @@ sistema abria a câmera ou galeria e o app recebia uma resposta.
 
 ```mermaid
 sequenceDiagram
-    participant U as Usuario
+    participant U as Usuário
     participant A as App Flutter
     participant P as image_picker
     participant S as Sistema
 
-    U->>A: toca em Camera ou Galeria
+    U->>A: toca em Câmera ou Galeria
     A->>P: pickImage(...)
     P->>S: abre recurso nativo
     S-->>P: devolve arquivo ou cancelamento
@@ -162,10 +162,10 @@ ouvindo.
 sequenceDiagram
     participant A as App Flutter
     participant P as sensors_plus
-    participant S as Acelerometro
+    participant S as Acelerômetro
 
     A->>P: assina accelerometerEventStream()
-    loop varias vezes por segundo
+    loop várias vezes por segundo
         S-->>P: x, y, z
         P-->>A: AccelerometerEvent
         A-->>A: atualiza estado e interface
@@ -245,9 +245,9 @@ tela ou volta para a aplicação.
 
 ```mermaid
 flowchart TD
-    A[resumed: app visivel e interativo] --> B[inactive: transicao ou perda de foco]
+    A[resumed: app visível e interativo] --> B[inactive: transição ou perda de foco]
     B --> C[paused: app em segundo plano]
-    C --> D[resumed: usuario voltou]
+    C --> D[resumed: usuário voltou]
     C --> E[detached: engine desconectando]
 ```
 
@@ -359,7 +359,7 @@ class _SensorHomePageState extends State<SensorHomePage>
   double _y = 0;
   double _z = 0;
   bool _isListening = false;
-  String _status = 'Aguardando leitura do acelerometro...';
+  String _status = 'Aguardando leitura do acelerômetro...';
 
   @override
   void initState() {
@@ -394,14 +394,14 @@ class _SensorHomePageState extends State<SensorHomePage>
         }
 
         setState(() {
-          _status = 'Nao foi possivel ler o acelerometro: $error';
+          _status = 'Não foi possível ler o acelerômetro: $error';
         });
       },
     );
 
     setState(() {
       _isListening = true;
-      _status = 'Lendo o acelerometro...';
+      _status = 'Lendo o acelerômetro...';
     });
   }
 
@@ -637,7 +637,7 @@ do nível sempre quadrada, mesmo em telas diferentes.
 flowchart LR
     A[dart:async] --> B[StreamSubscription]
     C[dart:math] --> D[Calculo de tamanho]
-    E[sensors_plus] --> F[Eventos do acelerometro]
+    E[sensors_plus] --> F[Eventos do acelerômetro]
     G[material.dart] --> H[Interface]
 ```
 
@@ -650,7 +650,7 @@ double _x = 0;
 double _y = 0;
 double _z = 0;
 bool _isListening = false;
-String _status = 'Aguardando leitura do acelerometro...';
+String _status = 'Aguardando leitura do acelerômetro...';
 ```
 
 Essas variáveis guardam o estado atual da tela:
@@ -718,8 +718,8 @@ de mexer na interface, confirme se a tela ainda existe.
 
 ```mermaid
 flowchart TD
-    A[Evento chegou] --> B{Tela ainda esta montada?}
-    B -->|Nao| C[Ignora o evento]
+    A[Evento chegou] --> B{Tela ainda está montada?}
+    B -->|Não| C[Ignora o evento]
     B -->|Sim| D[Atualiza x y z]
     D --> E[Recalcula mensagem]
     E --> F[Redesenha interface]
@@ -766,9 +766,9 @@ qualquer outro estado, a leitura é pausada.
 ```mermaid
 stateDiagram-v2
     [*] --> resumed
-    resumed --> inactive: usuario abre notificacao ou troca de foco
+    resumed --> inactive: usuário abre notificação ou troca de foco
     inactive --> paused: app vai para segundo plano
-    paused --> resumed: usuario volta
+    paused --> resumed: usuário volta
     resumed --> SensorAtivo
     inactive --> SensorPausado
     paused --> SensorPausado
@@ -811,8 +811,8 @@ precisa transformar esses valores em coordenadas dentro de um quadrado.
 
 ```mermaid
 flowchart TD
-    A[Valor x do acelerometro] --> B[Dividir por 9.8]
-    C[Valor y do acelerometro] --> D[Dividir por 9.8]
+    A[Valor x do acelerômetro] --> B[Dividir por 9.8]
+    C[Valor y do acelerômetro] --> D[Dividir por 9.8]
     B --> E[Limitar entre -1 e 1]
     D --> E
     E --> F[Multiplicar pelo limite visual]
@@ -976,7 +976,7 @@ A regra pode ser:
 flowchart TD
     A[Receber x e y] --> B{x.abs < 1.2 e y.abs < 1.2?}
     B -->|Sim| C[Bolha verde]
-    B -->|Nao| D[Bolha laranja]
+    B -->|Não| D[Bolha laranja]
 ```
 
 Para implementar, você pode calcular uma variável dentro do `_BubbleLevel`:
@@ -1008,17 +1008,17 @@ Antes de entregar, explique o fluxo completo com suas palavras:
 flowchart TD
     A[App inicia] --> B[initState]
     B --> C[Registrar observer]
-    C --> D[Assinar stream do acelerometro]
+    C --> D[Assinar stream do acelerômetro]
     D --> E[Receber AccelerometerEvent]
     E --> F[Atualizar estado]
     F --> G[Redesenhar valores e bolha]
-    G --> H{Usuario saiu do app?}
+    G --> H{Usuário saiu do app?}
     H -->|Sim| I[didChangeAppLifecycleState]
     I --> J[Cancelar assinatura]
-    H -->|Nao| E
-    J --> K{Usuario voltou?}
+    H -->|Não| E
+    J --> K{Usuário voltou?}
     K -->|Sim| D
-    K -->|Nao| L[dispose cancela tudo ao destruir a tela]
+    K -->|Não| L[dispose cancela tudo ao destruir a tela]
 ```
 
 Se você consegue explicar esse diagrama, você entendeu o ponto principal da

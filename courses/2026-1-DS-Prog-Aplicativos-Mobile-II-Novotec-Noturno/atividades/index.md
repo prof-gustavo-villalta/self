@@ -27,9 +27,9 @@ category: atividades
 | 10   | 10        | 20/05          | 23/05       | [Câmera/Galeria + Permissões](atividade-10)             | [Formulário Aula 10](formulario-aula-10)                                                                                  |
 | 11   | 11        | 23/05          | 27/05       | [Sensores (Acelerômetro)](atividade-11)                 | [Formulário Aula 11](formulario-aula-11)                                                                                  |
 | 12   | 12        | 27/05          | 30/05       | [Entrega embutida na Aula 12](../aulas/aula-12)         | Formulário indicado pelo professor                                                                                        |
-| 13   | 13        | 30/05          | 03/06       | [Mapa + Marcadores (+ SQLite opcional)](atividade-13)   | [Formulário Aula 13](formulario-aula-13)                                                                                  |
-| 14   | 14        | 03/06          | 10/06       | [WebSocket (Tempo Real) + Proposta Final](atividade-14) | [Formulário Aula 14](formulario-aula-14)                                                                                  |
-| 15   | 15        | 10/06          | 17/06       | [Bluetooth (ou Mock) + Sprint Final](atividade-15)      | [Formulário Aula 15](formulario-aula-15)                                                                                  |
+| 13   | 13        | 30/05          | 03/06       | [Entrega embutida na Aula 13](../aulas/aula-13)         | Formulário indicado pelo professor                                                                                        |
+| 14   | 14        | 03/06          | 10/06       | [Entrega embutida na Aula 14](../aulas/aula-14)         | Formulário indicado pelo professor                                                                                        |
+| 15   | 15        | 10/06          | 17/06       | [Entrega embutida na Aula 15](../aulas/aula-15)         | Formulário indicado pelo professor                                                                                        |
 | 16   | 16        | 17/06          | 24/06       | [Entrega Final + Build + Apresentação](atividade-16)    | [Formulário Aula 16](formulario-aula-16)                                                                                  |
 
 ---
