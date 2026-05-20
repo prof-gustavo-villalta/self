@@ -10,6 +10,7 @@ category: aulas
 - **Período:** 2026 - 1º Semestre
 - **Dias de Aula:**
   - Quarta-feira (5 aulas/dia)
+  - Sábados letivos: 23/05 e 30/05
 - **Laboratório**: Laboratório 6
 
 ---
@@ -29,13 +30,13 @@ category: aulas
 | 08    | 06/05 | [API REST (Parte 1)](aula-08)                                                                                                     |                                                                                                                           |
 | 09    | 13/05 | [API REST (Parte 2)](aula-09)                                                                                                     | [Formulário Aula 09](https://docs.google.com/forms/d/e/1FAIpQLSc5naYv_iX07p-Z_Siz1FfU3Voh-BbpPH5AcKCETqSNh7PF6g/viewform?usp=dialog) |
 | 10    | 20/05 | [Câmera e Galeria + Permissões](aula-10)                                                                                          |                                                                                                                           |
-| 11    | 27/05 | [Sensores + Ciclo de Vida](aula-11)                                                                                               |                                                                                                                           |
-| 12    | 03/06 | [GPS + Permissões + Tracking](aula-12)                                                                                            |                                                                                                                           |
-| 13    | 10/06 | [Mapas + Marcadores (+ SQLite opcional)](aula-13)                                                                                 |                                                                                                                           |
-| 14    | 17/06 | [WebSocket + Início do Projeto Final](aula-14)                                                                                    |                                                                                                                           |
-| 15    | 24/06 | [Bluetooth + Sprint do Projeto](aula-15)                                                                                          |                                                                                                                           |
-| 16    | 01/07 | [Empacotamento + Apresentação Final](aula-16)                                                                                     | [Formulário Aula 16](/self/courses/2026-1-DS-Prog-Aplicativos-Mobile-II-Novotec-Noturno/atividades/formulario-aula-16)    |
+| 11    | 23/05 | [Sensores + Ciclo de Vida](aula-11)                                                                                               |                                                                                                                           |
+| 12    | 27/05 | [GPS + Permissões + Tracking](aula-12)                                                                                            |                                                                                                                           |
+| 13    | 30/05 | [Mapas + Marcadores (+ SQLite opcional)](aula-13)                                                                                 |                                                                                                                           |
+| 14    | 03/06 | [WebSocket + Início do Projeto Final](aula-14)                                                                                    |                                                                                                                           |
+| 15    | 10/06 | [Bluetooth + Sprint do Projeto](aula-15)                                                                                          |                                                                                                                           |
+| 16    | 17/06 | [Empacotamento + Apresentação Final](aula-16)                                                                                     | [Formulário Aula 16](/self/courses/2026-1-DS-Prog-Aplicativos-Mobile-II-Novotec-Noturno/atividades/formulario-aula-16)    |
 
 ---
 
-**Última atualização:** 13/05/2026
+**Última atualização:** 20/05/2026

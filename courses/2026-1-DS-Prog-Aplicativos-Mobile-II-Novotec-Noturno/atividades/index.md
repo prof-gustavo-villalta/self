@@ -24,14 +24,14 @@ category: atividades
 | 07   | 07        | 29/04          | 06/05       | [Checkpoint de Portfólio (01-06)](atividade-07)         | [Formulário Aula 07](formulario-aula-07)                                                                                  |
 | 08   | 08        | 06/05          | 13/05       | [REST Parte 1 (GET + Lista)](atividade-08)              | [Formulário Aula 08](formulario-aula-08)                                                                                  |
 | 09   | 09        | 13/05          | 20/05       | [Entrega embutida na Aula 09](../aulas/aula-09)         | [Formulário Aula 09](https://docs.google.com/forms/d/e/1FAIpQLSc5naYv_iX07p-Z_Siz1FfU3Voh-BbpPH5AcKCETqSNh7PF6g/viewform?usp=dialog) |
-| 10   | 10        | 20/05          | 27/05       | [Câmera/Galeria + Permissões](atividade-10)             | [Formulário Aula 10](formulario-aula-10)                                                                                  |
-| 11   | 11        | 27/05          | 03/06       | [Sensores (Acelerômetro)](atividade-11)                 | [Formulário Aula 11](formulario-aula-11)                                                                                  |
-| 12   | 12        | 03/06          | 10/06       | [GPS (Posição + Tracking)](atividade-12)                | [Formulário Aula 12](formulario-aula-12)                                                                                  |
-| 13   | 13        | 10/06          | 17/06       | [Mapa + Marcadores (+ SQLite opcional)](atividade-13)   | [Formulário Aula 13](formulario-aula-13)                                                                                  |
-| 14   | 14        | 17/06          | 24/06       | [WebSocket (Tempo Real) + Proposta Final](atividade-14) | [Formulário Aula 14](formulario-aula-14)                                                                                  |
-| 15   | 15        | 24/06          | 01/07       | [Bluetooth (ou Mock) + Sprint Final](atividade-15)      | [Formulário Aula 15](formulario-aula-15)                                                                                  |
-| 16   | 16        | 01/07          | 06/07       | [Entrega Final + Build + Apresentação](atividade-16)    | [Formulário Aula 16](formulario-aula-16)                                                                                  |
+| 10   | 10        | 20/05          | 23/05       | [Câmera/Galeria + Permissões](atividade-10)             | [Formulário Aula 10](formulario-aula-10)                                                                                  |
+| 11   | 11        | 23/05          | 27/05       | [Sensores (Acelerômetro)](atividade-11)                 | [Formulário Aula 11](formulario-aula-11)                                                                                  |
+| 12   | 12        | 27/05          | 30/05       | [Entrega embutida na Aula 12](../aulas/aula-12)         | Formulário indicado pelo professor                                                                                        |
+| 13   | 13        | 30/05          | 03/06       | [Mapa + Marcadores (+ SQLite opcional)](atividade-13)   | [Formulário Aula 13](formulario-aula-13)                                                                                  |
+| 14   | 14        | 03/06          | 10/06       | [WebSocket (Tempo Real) + Proposta Final](atividade-14) | [Formulário Aula 14](formulario-aula-14)                                                                                  |
+| 15   | 15        | 10/06          | 17/06       | [Bluetooth (ou Mock) + Sprint Final](atividade-15)      | [Formulário Aula 15](formulario-aula-15)                                                                                  |
+| 16   | 16        | 17/06          | 24/06       | [Entrega Final + Build + Apresentação](atividade-16)    | [Formulário Aula 16](formulario-aula-16)                                                                                  |
 
 ---
 
-**Última atualização:** 13/05/2026
+**Última atualização:** 20/05/2026
