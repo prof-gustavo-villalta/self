@@ -1,87 +1,79 @@
 ---
 layout: aula
-title: "Aula 17 - Planilhas: Fórmulas Básicas"
-date: 2026-05-19
+title: "Aula 17 - Projeto Final: Entrega e Apresentação"
+date: 2026-06-29
 category: aulas
 course_id: ptic
 ---
 
-# Aula 17 - Planilhas: Fórmulas Básicas
+# Aula 17 - Projeto Final: Entrega e Apresentação
 
-**Data:** 19/05/2026  
+**Data:** 29/06/2026  
 **Duração:** 1 hora-aula (50 min)  
 **Local:** Laboratório de Informática  
-**Objetivo:** Compreender a lógica das fórmulas e funções, aplicando cálculos de
-soma, média e multiplicação em contextos administrativos.
+**Objetivo:** Apresentar o projeto final desenvolvido em Flutter, explicando o
+problema escolhido, a relação com o TCC quando houver e a solução implementada.
 
 ---
 
-## 1. Conteúdo Teórico: O Igual que Faz Mágica
+## 1. Entrega do Projeto Final
 
-Uma planilha só começa a "pensar" quando usamos o sinal de igual (**=**). A
-partir daí, ela deixa de mostrar texto e passa a processar instruções lógicas.
+Cada grupo deve apresentar um aplicativo Flutter de tema aberto. O projeto deve
+demonstrar uma solução digital simples, preferencialmente ligada ao TCC do grupo.
 
-### Operadores e Funções
+A apresentação deve deixar claro:
 
-- **Operadores Matemáticos:** `+` (Soma), `-` (Subtração), `*` (Multiplicação),
-  `/` (Divisão).
-- **Referências de Célula:** Em vez de digitar `=10+20`, usamos `=A1+B1`. Assim,
-  se o valor em A1 mudar, o resultado atualiza sozinho!
-- **Funções Básicas:**
-  - `=SOMA(A1:A10)`: Soma todos os valores no intervalo.
-  - `=MÉDIA(B1:B10)`: Calcula a média aritmética.
-  - `=MÁXIMO()` e `=MÍNIMO()`: Identificam os valores extremos.
+- Qual problema o aplicativo resolve.
+- Quem é o público-alvo.
+- Como o aplicativo se relaciona com o TCC, se houver.
+- Quais telas e funcionalidades foram implementadas.
+- O que ainda poderia ser melhorado em uma próxima versão.
 
 ---
 
-## 2. Guia para o Professor (Instruções Didáticas)
+## 2. Roteiro de Apresentação
 
-### Abertura (10 minutos)
+Cada grupo terá alguns minutos para apresentar:
 
-- **A Analogia das Caixas:** Explique que a célula é uma caixa. O endereço (A1)
-  é a etiqueta. A fórmula olha dentro da caixa para fazer a conta.
-- **Erros Comuns:** Mostre o erro `#VALOR!` (quando tentamos somar texto com
-  número) e como corrigi-lo.
-
-### Oficina Prática (35 minutos)
-
-- **Foco:** Ajude os alunos a usarem a **Alça de Preenchimento** para arrastar
-  fórmulas de multiplicação (Preço x Quantidade) para a lista toda.
-- **Dica:** Ensine o uso do ponto e vírgula (`;` para e) versus dois pontos (`:`
-  para até).
+1. Nome do aplicativo.
+2. Problema e público-alvo.
+3. Relação com o TCC ou justificativa do tema livre.
+4. Demonstração das telas no Flutter.
+5. Explicação da funcionalidade principal.
+6. Dificuldades encontradas e próximos passos.
 
 ---
 
-## 3. Atividade Prática: Planilha de Orçamento Adm
+## 3. Critérios de Avaliação
 
-Use a tabela criada na aula anterior (ou crie uma nova) e adicione inteligência
-a ela.
+O projeto será observado pelos seguintes critérios:
 
-### Passo a Passo:
+- Uso de Flutter no desenvolvimento do aplicativo.
+- Clareza do problema escolhido.
+- Coerência entre tema, público-alvo e telas.
+- Organização visual e navegação.
+- Funcionamento mínimo da demonstração.
+- Relação com o TCC, quando aplicável.
+- Capacidade do grupo de explicar as decisões tomadas.
 
-1. **Multiplicação:** Crie uma nova coluna chamada **Valor Total**. Use uma
-   fórmula para calcular `Quantidade * Preço Unitário` para cada item.
-2. **Soma Total:** No final da tabela, use a função `=SOMA()` para calcular o
-   valor total de todo o estoque.
-3. **Estatísticas:** Use as funções `=MÉDIA()`, `=MÁXIMO()` e `=MÍNIMO()` para
-   descobrir:
-   - Qual o preço médio dos itens.
-   - Qual o item mais caro.
-   - Qual o item mais barato.
-
-### Critérios de Sucesso:
-
-- Fórmulas aplicadas corretamente (usando referências de células).
-- Resultado automático ao alterar uma quantidade.
-- **Link de Entrega:** [Formulário da Aula 17](../atividades/formulario-aula-17)
+O projeto não precisa estar perfeito. Ele precisa ser compreensível, executável
+ou demonstrável, e representar uma solução com intenção clara.
 
 ---
 
-## 🔗 Links e Recursos
+## 4. Fechamento
 
-- **Google Sheets:** [sheets.google.com](https://sheets.google.com)
-- **Suporte:**
-  [Lista de Funções do Google Sheets](https://support.google.com/docs/table/25273)
+Ao final das apresentações, registre com a turma:
+
+- Quais projetos ficaram mais claros para o usuário.
+- Quais ideias podem evoluir no TCC.
+- Quais melhorias técnicas seriam prioridade em uma próxima etapa.
+
+---
+
+## Formulário
+
+- [Formulário do Projeto Final](https://docs.google.com/forms/d/e/1FAIpQLSeNmponI0lUIRLVdcs5pzUDYvGF5O6Y5KJRrdR7gh8HEnhBww/viewform?usp=dialog)
 
 ---
 

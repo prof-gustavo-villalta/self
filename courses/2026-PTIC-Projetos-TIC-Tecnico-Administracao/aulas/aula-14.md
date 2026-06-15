@@ -1,14 +1,14 @@
 ---
 layout: aula
 title: "Aula 14 - Seminários: Inovação na Administração (Parte I)"
-date: 2026-05-11
+date: 2026-06-08
 category: aulas
 course_id: ptic
 ---
 
 # Aula 14 - Seminários: Inovação na Administração (Parte I)
 
-**Data:** 11/05/2026  
+**Data:** 08/06/2026  
 **Duração:** 1 hora-aula (50 min)  
 **Local:** Laboratório de Informática  
 **Objetivo:** Apresentar os projetos desenvolvidos, aplicando técnicas de design

@@ -1,87 +1,81 @@
 ---
 layout: aula
-title: "Aula 16 - Planilhas: Interface e Dados"
-date: 2026-05-18
+title: "Aula 16 - Projeto Final: Desenvolvimento em Flutter"
+date: 2026-06-22
 category: aulas
 course_id: ptic
 ---
 
-# Aula 16 - Planilhas: Interface e Dados
+# Aula 16 - Projeto Final: Desenvolvimento em Flutter
 
-**Data:** 18/05/2026  
+**Data:** 22/06/2026  
 **Duração:** 1 hora-aula (50 min)  
 **Local:** Laboratório de Informática  
-**Objetivo:** Compreender a interface de planilhas eletrônicas, tipos de dados e
-organização lógica de informações para fins administrativos.
+**Objetivo:** Desenvolver a primeira versão funcional do projeto final em
+Flutter, com foco nas telas principais e na navegação do aplicativo.
 
 ---
 
-## 1. Conteúdo Teórico: O Mundo das Células
+## 1. Foco da Aula
 
-Uma planilha eletrônica (como Google Sheets ou Excel) é uma matriz de linhas e
-colunas usada para organizar dados e realizar cálculos automáticos.
+Esta aula é uma oficina de desenvolvimento. Cada grupo deve trabalhar no seu
+projeto final, usando Flutter para transformar o planejamento da aula anterior
+em um protótipo funcional.
 
-### Conceitos Básicos
-
-- **Endereçamento:** Cada célula tem um "nome" único (ex: **A1**, **B10**),
-  formado pela letra da coluna e o número da linha.
-- **Tipos de Dados:**
-  - **Texto:** Alinhado à esquerda por padrão.
-  - **Número:** Alinhado à direita. Usado para cálculos.
-  - **Moeda:** Números formatados com R$.
-  - **Data:** Formatos específicos que o computador entende cronologicamente.
-- **Boas Práticas:** Use cabeçalhos claros, evite mesclar células em bases de
-  dados e mantenha uma informação por célula.
+O aplicativo pode estar incompleto, mas precisa começar a funcionar de verdade:
+abrir, exibir telas, permitir navegação e mostrar a ideia central do projeto.
 
 ---
 
-## 2. Guia para o Professor (Instruções Didáticas)
+## 2. Prioridades de Desenvolvimento
 
-### Abertura (10 minutos)
+Cada grupo deve priorizar:
 
-- **Demonstração:** Abra o Google Sheets. Mostre como navegar usando as setas do
-  teclado e como o cursor muda de forma.
-- **O "Pulo do Gato":** Mostre a alça de preenchimento (o quadradinho azul no
-  canto da célula) para criar sequências numéricas rápidas.
+- Criar ou revisar a estrutura do projeto Flutter.
+- Implementar a tela inicial.
+- Implementar pelo menos mais duas telas.
+- Criar navegação entre as telas.
+- Usar textos, botões, formulários, listas, cards ou imagens conforme a proposta.
+- Manter nomes de arquivos, pastas e widgets organizados.
 
-### Oficina Prática (35 minutos)
-
-- **Apoio:** Verifique se os alunos estão formatando valores financeiros como
-  "Moeda" (clicando no botão `R$`) ou se estão digitando "R$" manualmente (o que
-  impede cálculos).
-- **Atalhos Úteis:** `Ctrl + Setas` para navegar em tabelas grandes.
+Se o projeto estiver vinculado ao TCC, as telas devem representar uma parte real
+da solução proposta pelo grupo.
 
 ---
 
-## 3. Atividade Prática: Cadastro de Materiais
+## 3. Atividade da Aula
 
-Sua tarefa é criar uma tabela de controle de estoque para um escritório
-administrativo.
+Durante a oficina, cada grupo deve responder a estas perguntas enquanto
+desenvolve:
 
-### Passo a Passo:
+1. Qual tela mostra melhor a ideia do projeto?
+2. O usuário consegue entender o que fazer ao abrir o aplicativo?
+3. O aplicativo tem navegação suficiente para demonstrar o fluxo principal?
+4. O que precisa ficar pronto até a aula de apresentação?
 
-1. **Criar:** Abra o Google Sheets e crie um arquivo chamado
-   `Aula-16-Planilha-SeuNome`.
-2. **Estrutura:** Crie as colunas: **Item**, **Data da Compra**, **Quantidade**
-   e **Preço Unitário**.
-3. **Dados:** Insira 10 itens (ex: Papel A4, Caneta Azul, Grampeador, etc).
-4. **Formatação:**
-   - Coluna de Preço deve estar em formato **Moeda**.
-   - Coluna de Data deve estar em formato **Data**.
-   - Cabeçalhos em **Negrito** e com fundo colorido (Contraste!).
+### Entrega Parcial
 
-### Critérios de Sucesso:
+Ao final da aula, o grupo deve mostrar ao professor:
 
-- Células com os tipos de dados corretos.
-- Alinhamento profissional (Números à direita, Textos à esquerda).
-- **Link de Entrega:** [Formulário da Aula 16](../atividades/formulario-aula-16)
+- Projeto Flutter aberto no computador.
+- Telas principais em desenvolvimento.
+- Navegação funcionando ou em implementação.
+- Pendências para a entrega final.
 
 ---
 
-## 🔗 Links e Recursos
+## 4. Guia para o Professor
 
-- **Google Sheets:** [sheets.google.com](https://sheets.google.com)
-- **Manual:** [Guia Google Workspace](../materiais/material-08)
+- Circule pelos grupos e ajude a remover bloqueios técnicos.
+- Oriente os alunos a entregar uma versão pequena, mas funcional.
+- Evite que os grupos gastem todo o tempo apenas escolhendo cores ou imagens.
+- Reforce a conexão entre problema, público-alvo e telas do aplicativo.
+
+---
+
+## Formulário
+
+- [Formulário do Projeto Final](https://docs.google.com/forms/d/e/1FAIpQLSeNmponI0lUIRLVdcs5pzUDYvGF5O6Y5KJRrdR7gh8HEnhBww/viewform?usp=dialog)
 
 ---
 
