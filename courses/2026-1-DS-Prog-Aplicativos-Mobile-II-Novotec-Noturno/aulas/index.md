@@ -33,9 +33,9 @@ category: aulas
 | 11    | 23/05 | [Sensores + Ciclo de Vida](aula-11)                                                                                               | [Formulário Aula 11](https://docs.google.com/forms/d/e/1FAIpQLSeNmponI0lUIRLVdcs5pzUDYvGF5O6Y5KJRrdR7gh8HEnhBww/viewform?usp=dialog) |
 | 12    | 27/05 | [GPS + Permissões + Tracking](aula-12)                                                                                            | [Formulário Aula 12](https://docs.google.com/forms/d/e/1FAIpQLSeNmponI0lUIRLVdcs5pzUDYvGF5O6Y5KJRrdR7gh8HEnhBww/viewform?usp=dialog) |
 | 13    | 30/05 | [Mapas + Marcadores (+ SQLite opcional)](aula-13)                                                                                 | [Formulário Aula 13](https://docs.google.com/forms/d/e/1FAIpQLSeNmponI0lUIRLVdcs5pzUDYvGF5O6Y5KJRrdR7gh8HEnhBww/viewform?usp=dialog) |
-| 14    | 03/06 | [WebSocket + Início do Projeto Final](aula-14)                                                                                    |                                                                                                                           |
-| 15    | 10/06 | [Bluetooth + Sprint do Projeto](aula-15)                                                                                          |                                                                                                                           |
-| 16    | 17/06 | [Empacotamento + Apresentação Final](aula-16)                                                                                     | [Formulário Aula 16](/self/courses/2026-1-DS-Prog-Aplicativos-Mobile-II-Novotec-Noturno/atividades/formulario-aula-16)    |
+| 14    | 03/06 | [WebSocket + Início do Projeto Final](aula-14)                                                                                    | [Formulário Aula 14](https://docs.google.com/forms/d/e/1FAIpQLSeNmponI0lUIRLVdcs5pzUDYvGF5O6Y5KJRrdR7gh8HEnhBww/viewform?usp=dialog) |
+| 15    | 10/06 | [Bluetooth + Sprint do Projeto](aula-15)                                                                                          | [Formulário Aula 15](https://docs.google.com/forms/d/e/1FAIpQLSeNmponI0lUIRLVdcs5pzUDYvGF5O6Y5KJRrdR7gh8HEnhBww/viewform?usp=dialog) |
+| 16    | 17/06 | [Empacotamento + Apresentação Final](aula-16)                                                                                     | [Formulário Aula 16](https://docs.google.com/forms/d/e/1FAIpQLSeNmponI0lUIRLVdcs5pzUDYvGF5O6Y5KJRrdR7gh8HEnhBww/viewform?usp=dialog) |
 
 ---
 
